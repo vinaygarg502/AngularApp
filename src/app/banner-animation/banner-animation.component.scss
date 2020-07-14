@@ -1,0 +1,21 @@
+
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+  }
+  .animated-banner{
+    background-color: red;
+    width:0;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    animation: banner 2s infinite;
+  }
+  @keyframes banner {
+    from {width: 0;font-size:0;}
+    to {width: 100%; font-size:80px;}
+  }

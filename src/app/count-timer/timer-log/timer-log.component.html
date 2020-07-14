@@ -1,0 +1,9 @@
+<div class="flex justify-center align-center height-200">
+    <ul>
+        <li *ngFor = "let activity of activityArray">
+            <span>{{activity.eventName}} </span> at 
+            <span> {{activity.date | date:'medium'}} </span>
+            <span>{{activity.count}}</span>
+        </li>
+    </ul>    
+</div>

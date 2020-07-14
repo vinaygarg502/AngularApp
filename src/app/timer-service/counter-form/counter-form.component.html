@@ -1,0 +1,14 @@
+<div class="flex justify-center align-center flex-column form-group height-200">
+    <input type ="text" [(ngModel)]="counterInput" class="form-control" (blur)="setInput()">
+    <div class="mt20">
+        <button type ="button" (click)="onStart(!flag)" [disabled]="!(!!counterInput)">Start/ Pause</button>
+        <button type ="button" (click)="onReset()" [disabled]="!(!!counterInput)">Reset Game</button>
+    </div>
+    <div class="mt20">
+        <ul>
+            <li *ngFor = "let activity of activityArray | filterdata:'paused'">
+               <p><span>{{activity.eventName}} </span> at <span>{{activity.count}}</span></p>
+            </li>
+        </ul>
+    </div>    
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <app-timer [count]="count"></app-timer>
+        </div>
+        <div class="col-xs-6">
+            <app-timer-input 
+                (intervalFired)="onGameStart($event)" 
+                (logCounter)="onCounterLog($event)"
+                (logFired)="onActivityLog($event)"
+                [activityArray]="activityArray">
+            </app-timer-input>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <app-timer-log 
+            [activityArray]="activityArray">
+            </app-timer-log>
+        </div>
+        <div class="col-xs-6">
+            <app-timer-counter 
+                [startCount]="startCounter" 
+                [pauseCount] ="pauseCounter">
+            </app-timer-counter>
+        </div>
+    </div>
+</div>

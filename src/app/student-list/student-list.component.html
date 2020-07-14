@@ -1,0 +1,12 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>           
+        <th *ngFor="let student of studentData[0] | keys" (click)="sortData(student, flag)">{{student}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of studentData">           
+        <td *ngFor="let key of student | keys">{{student[key]}}</td>
+      </tr>
+    </tbody>
+  </table>
