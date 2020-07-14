@@ -14,4 +14,4 @@ deploy:
   provider: heroku
   api_key: $ANGULAR_TOKEN
   app:
-    master: rickynmorty
+    master: angularassign
