@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 10.15.3
+cache: npm
+
+install:
+  - npm ci
+
+script:
+  - npm run build
+  - npm run start
+
+deploy:
+  provider: heroku
+  api_key: $ANGULAR_TOKEN
+  app:
+    master: rickynmorty
